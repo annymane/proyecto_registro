@@ -9,19 +9,22 @@
 <body>
 <!-- partial:index.partial.html -->
 <div id="bg"></div>
-
-<form>
+<div>
+<mat-spinner class = "spinner" *ngIf= "loading"  diameter="50"></mat-spinner>
+<form *ngIf= "!loading" [formGroup]="form" (ngSubmit)="ingresar()">
   <div class="form-field">
-    <input type="email" placeholder="Email / Username" required/>
+    <input type="text" placeholder="ID" formControlName="usuario">
   </div>
   
   <div class="form-field">
-    <input type="password" placeholder="Password" required/>                         
+    <input type="password" placeholder="Password" formControlName="password"/>                         
   </div>
   
   <div class="form-field">
-    <button class="btn" type="submit">Log in</button>
+    <button class ="btn" type="submit"  mat-raised-button color="primary" [disabled]="form.invalid">Log in</button>
   </div>
+  
 </form>
+</div>
 </body>
 </html>
