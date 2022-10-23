@@ -8,6 +8,9 @@ import {TableroComponent} from './diseño/tablero/tablero.component';
 const routes: Routes = [
   { path: '', redirectTo: 'acceso', pathMatch: 'full' },
   { path: 'acceso', component: AccesoComponent },
+  { path : 'dashboard', loadChildren:() => import('./diseño/dashboard/dashboard.module').then(m => m.DashboardModule)},
+  { path: '**', redirectTo: 'acceso', pathMatch: 'full' },
+
 
   { path: 'editar', component: EditarComponent },
   { path: 'nuevo', component: NuevoComponent },
