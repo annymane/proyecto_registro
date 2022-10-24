@@ -2,4 +2,57 @@
     <mat-toolbar>
         <span>Usuarios</span>
     </mat-toolbar>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="lastname">
+          <th mat-header-cell *matHeaderCellDef> Lastname </th>
+          <td mat-cell *matCellDef="let element"> {{element.lastname}} </td>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="usuario">
+          <th mat-header-cell *matHeaderCellDef> Usuario </th>
+          <td mat-cell *matCellDef="let element"> {{element.usuario}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="nit">
+            <th mat-header-cell *matHeaderCellDef> NIT </th>
+            <td mat-cell *matCellDef="let element"> {{element.nit}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="opciones">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element" style="text-align: right;"> 
+
+                <a class="puntero" style="color: #cd66ec"  matTooltip="Editar">
+                    <mat-icon>edit</mat-icon>
+                </a>
+                <a class="puntero" style="color: #b76aca"  matTooltip="Ver usuario">
+                    <mat-icon>search</mat-icon>
+                </a>
+                <a class="puntero" style="color: #9944b0"  matTooltip="Eliminar">
+                    <mat-icon>delete</mat-icon>
+                </a>
+            </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      
+      
 </div>
