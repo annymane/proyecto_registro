@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Menu } from 'src/app/interface/menu';
+import { ApiService } from 'src/app/Server/api.service';
 
 @Component({
   selector: 'app-theme',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ThemeComponent implements OnInit {
 
-  constructor() { }
+  menu : Menu[] = [];
+
+  constructor( private _apiService : ApiService) { }
 
   ngOnInit(): void {
+    this.cargarMenu();
+  }
+
+  cargarMenu(){
+    this._apiService.getMenu().subscribe( data => {
+      this.menu = data;
+    })
   }
 
 }
