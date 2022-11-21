@@ -11,7 +11,7 @@ import { MatTableDataSource } from '@angular/material/table';
 export class UserComponent implements OnInit {
 
   list_usuarios: Usuario[] = [
-    {id: '000118389', name: 'William', lastname:'García', usuario: 'william_ga96', nit: '56093491'},
+    {id: '000118389', name: 'Manuel', lastname:'Torres', usuario: 'manu_to08', nit: '56093491'},
   ];
 
   displayedColumns: string[] = ['id', 'name', 'lastname', 'usuario', 'nit', 'opciones'];

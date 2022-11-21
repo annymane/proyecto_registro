@@ -1,10 +1,9 @@
 <div class="containes">
     <mat-toolbar>
-        <span>Usuarios</span>
+      <span> Usuarios</span>
     </mat-toolbar>
 
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
         <!-- Position Column -->
         <ng-container matColumnDef="id">
           <th mat-header-cell *matHeaderCellDef> ID </th>
@@ -13,13 +12,13 @@
       
         <!-- Name Column -->
         <ng-container matColumnDef="name">
-          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <th mat-header-cell *matHeaderCellDef> Nombre </th>
           <td mat-cell *matCellDef="let element"> {{element.name}} </td>
         </ng-container>
       
         <!-- Weight Column -->
         <ng-container matColumnDef="lastname">
-          <th mat-header-cell *matHeaderCellDef> Lastname </th>
+          <th mat-header-cell *matHeaderCellDef> Apellido </th>
           <td mat-cell *matCellDef="let element"> {{element.lastname}} </td>
         </ng-container>
       
@@ -38,13 +37,13 @@
             <th mat-header-cell *matHeaderCellDef></th>
             <td mat-cell *matCellDef="let element" style="text-align: right;"> 
 
-                <a class="puntero" style="color: #cd66ec"  matTooltip="Editar">
+                <a class="puntero" style="color: #cd66ec"  matTooltip="Editar Usuario">
                     <mat-icon>edit</mat-icon>
                 </a>
                 <a class="puntero" style="color: #b76aca"  matTooltip="Ver usuario">
                     <mat-icon>search</mat-icon>
                 </a>
-                <a class="puntero" style="color: #9944b0"  matTooltip="Eliminar">
+                <a class="puntero" style="color: #9944b0"  matTooltip="Eliminar Usuario">
                     <mat-icon>delete</mat-icon>
                 </a>
             </td>
@@ -52,7 +51,9 @@
       
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-      </table>
-      
-      
+
+        <tr class="mat-row" *matNoDataRow>
+          <td class="mat-cell" colspan="4">No data matching the filter "{{this.list_usuarios}}"</td>
+        </tr>
+      </table>       
 </div>

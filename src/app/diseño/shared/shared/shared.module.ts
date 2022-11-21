@@ -11,8 +11,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
-import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTableModule} from '@angular/material/table';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 @NgModule({
@@ -26,8 +27,9 @@ import {MatTableModule} from '@angular/material/table';
     MatToolbarModule,
     MatIconModule,
     HttpClientModule,
+    MatTableModule,
     MatTooltipModule,
-    MatTableModule
+    MatFormFieldModule
   ],
   exports: [
     MatButtonModule,
@@ -37,8 +39,9 @@ import {MatTableModule} from '@angular/material/table';
     MatToolbarModule,
     MatIconModule,
     HttpClientModule,
+    MatTooltipModule,
     MatTableModule,
-    MatTooltipModule
+    MatFormFieldModule
   ]
 })
 export class SharedModule { }
