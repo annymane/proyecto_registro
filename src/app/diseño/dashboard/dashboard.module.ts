@@ -7,7 +7,9 @@ import { HomeComponent } from './home/home.component';
 import { ThemeComponent } from './theme/theme.component';
 import { UserComponent } from './user/user.component';
 import { ReportesComponent } from './reportes/reportes.component';
-import {DashboardComponent} from './dashboard.component'
+import {DashboardComponent} from './dashboard.component';
+import { EspecialidadesComponent } from './especialidades/especialidades.component';
+import { ConsultasComponent } from './consultas/consultas.component'
 
 
 
@@ -17,7 +19,9 @@ import {DashboardComponent} from './dashboard.component'
     ThemeComponent,
     UserComponent,
     ReportesComponent,
-    DashboardComponent
+    DashboardComponent,
+    EspecialidadesComponent,
+    ConsultasComponent
   ],
   imports: [
     CommonModule,

@@ -1,14 +1,22 @@
 [
     {
-        "nombre": "Dashboard",
+        "nombre": "Medicos",
         "redirect": "/dashboard"
     },
     {
-        "nombre": "Usuarios",
+        "nombre": "Paciente",
         "redirect": "/dashboard/user"
     },
     {
-        "nombre": "Reportes",
+        "nombre": "Examenes",
         "redirect": "/dashboard/reportes"
+    },
+    {
+        "nombre": "Consultas",
+        "redirect": "/dashboard/consultas"
+    },
+    {
+        "nombre": "Especialidades",
+        "redirect": "/dashboard/especialidades"
     }
 ]
