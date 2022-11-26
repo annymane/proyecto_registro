@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { PacientesService } from './paciente/paciente.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'PagHospital';
+  pacientes :any;
+
+  constructor(public paciente :PacientesService){}
+
+  ngOnInit(){
+    this.paciente.getPaciente().subscribe(
+      (r)=> {this.pacientes = r ; console.log(r)}
+    )
+  }
 }
